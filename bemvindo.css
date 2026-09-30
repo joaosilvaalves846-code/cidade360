@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #061c2c;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+
+.menu {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding: 0 28px 0 0;
+}
+
+.logo {
+    width: 74px;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.logo img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+}
+
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #dce4ef;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #203d5b,
+        #172f49
+    );
+
+    padding: 5px 38px 9px;
+
+    border-radius: 30px;
+
+    border-bottom: 4px solid #3686ee;
+
+    box-shadow:
+        inset 0 0 15px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #294c70;
+    transform: translateY(-2px);
+}
+
+nav .ativo {
+    color: white;
+}
+
+
+main {
+    padding: 27px 31px 0;
+}
+
+.boas-vindas {
+    margin-bottom: 13px;
+}
+
+.boas-vindas h1 {
+    color: #8ca7ce;
+
+    font-size: 48px;
+    line-height: 0.88;
+
+    font-weight: 800;
+    letter-spacing: -2px;
+
+    margin-bottom: 23px;
+}
+
+.boas-vindas p {
+    color: #829abd;
+
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 12px;
+}
+
+.card {
+    height: 380px;
+
+    background: #15415d;
+
+    border-radius: 31px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.linha {
+    position: absolute;
+
+    height: 1px;
+
+    background: #d9e5ef;
+}
+
+.linha-top {
+    width: 88%;
+    top: 56px;
+    left: 10px;
+}
+
+.linha-top::after {
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 12px;
+
+    background: #d9e5ef;
+
+    left: 0;
+    top: 0;
+}
+
+.linha-bottom {
+    width: 88%;
+    bottom: 55px;
+    left: 10px;
+}
+
+.linha-bottom::after {
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 12px;
+
+    background: #d9e5ef;
+
+    right: 0;
+    bottom: 0;
+}
+
+.conteudo {
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.conteudo h2 {
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+.conteudo h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.conteudo p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.destaque {
+    font-size: 21px !important;
+}
+
+.informacao {
+    font-size: 22px !important;
+    margin-top: 38px !important;
+}
+
+
+footer {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 21px 10px 0;
+
+    color: #88a8d2;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 0.3px;
+}
+
+.endereco {
+    max-width: 65%;
+}
+
+.contato {
+    text-align: right;
+   
+}
+
+footer strong {
+    font-weight: 800;
+}
+
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 7px 18px;
+    }
+
+    .cards {
+        gap: 15px;
+    }
+
+    .boas-vindas h1 {
+        font-size: 40px;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .menu {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 6px 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: 330px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .endereco {
+        max-width: 100%;
+    }
+
+    .contato {
+        text-align: left;
+    }}
